@@ -2,3 +2,9 @@
 /log/*.log
 /tmp
 /config/*.yml
+
+ngapp/node_modules
+ngapp/dist
+ngapp/.tmp
+ngapp/.sass-cache
+ngapp/app/bower_components

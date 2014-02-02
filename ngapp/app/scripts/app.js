@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngappApp', [
+angular.module('ngApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
