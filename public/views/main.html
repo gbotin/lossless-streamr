@@ -1,3 +1,13 @@
-<script type="text/javascript">// var src = "http://d1ddjbro6oyg4f.cloudfront.net/vacuity.flac";
-  var src = "https://s3-eu-west-1.amazonaws.com/lossless-streamr-development/vacuity.flac";
-  var player = AV.Player.fromURL(src);</script><button onclick="player.play()">Play</button> <button onclick="player.pause()">Pause</button>
+<script type="text/javascript">var player;
+
+  // var src = "http://d1ddjbro6oyg4f.cloudfront.net/";
+  var src = "https://s3-eu-west-1.amazonaws.com/lossless-streamr-development/";
+
+  $(document).ready(function(){
+    player = AV.Player.fromURL(src + $("#select").val() + '.flac');;
+
+    $("#select").change(function(){
+      player.stop();
+      player = AV.Player.fromURL(src + $("#select").val() + '.flac');
+    });
+  });</script><select id="select"><option value="vacuity">Gojira - Vacuity<option value="maintitle">Game of Thrones - Main Theme<option value="locust">Machine Head - Locust</select><button onclick="player.play()">Play</button> <button onclick="player.pause()">Pause</button> <button onclick="player.stop()">Stop</button>
